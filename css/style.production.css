@@ -137,6 +137,11 @@ section {
 	margin: 30px auto;
 }
 
+.contact {
+	max-width: 280px;
+	margin: 0 auto;
+}
+
 .page-header {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -248,6 +253,13 @@ section {
 	.project-list {
 		-ms-grid-columns: 1fr 20px 1fr;
 		grid-template-columns: 1fr 1fr;
+	}
+	.profile {
+		text-align: center;
+	}
+	.profile__portrait {
+		float: none;
+		margin-right: 0
 	}
 }
 
