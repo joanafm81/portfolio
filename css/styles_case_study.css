@@ -1,0 +1,64 @@
+h3 {
+  margin-top: 2rem;
+}
+
+#title {
+  background-image: url(../img/woman-holding-smartphone-mockup.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top right;
+  background-color: #1D120D;
+  height: 300px;
+  color: #fff;
+}
+
+#title h1,
+h2 {
+  max-width: 60%;
+  margin: 0;
+}
+
+#title h1 {
+  margin-top: 40px;
+  font-size: 45px;
+}
+
+section:not(#title) h2 {
+  text-transform: uppercase;
+}
+
+#summary {
+  margin-top: 2rem;
+}
+
+.summary-content {
+  display: flex;
+  gap: 40px;
+}
+
+.even {
+  background-color: #f0f0f0;
+}
+
+video {
+  float: right;
+  width: 300px;
+  margin: 30px;
+  box-shadow: 1px 1px 5px 1px #666;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.gallery img {
+  max-width: 30%;
+}
+
+.img-left {
+  float: left;
+  margin: 0 20px 20px 0;
+  max-width: 350px;
+}
