@@ -1,7 +1,3 @@
-h3 {
-  margin-top: 2rem;
-}
-
 #title {
   background-image: url(../img/woman-holding-smartphone-mockup.png);
   background-repeat: no-repeat;
@@ -23,8 +19,37 @@ h2 {
   font-size: 45px;
 }
 
+h3.break:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 40px 30px;
+}
+
 section:not(#title) h2 {
   text-transform: uppercase;
+}
+
+section:not(#summary) h3 {
+  margin-top: 3rem;
+}
+
+section:not(#summary) h3:not(.nobreak):before {
+  clear: both;
+  display: table;
+  content: "";
+}
+
+#process {
+  font-size: large;
 }
 
 #summary {
@@ -36,14 +61,53 @@ section:not(#title) h2 {
   gap: 40px;
 }
 
+.summary-content .description {
+  flex: 2;
+}
+
+.summary-content .info {
+  flex: 1;
+}
+
 .even {
   background-color: #f0f0f0;
 }
 
+ol#process-index {
+  max-width: 450px;
+  counter-reset: my-counter;
+  list-style: none;
+  padding-left: 40px;
+}
+
+ol#process-index li {
+  margin: 0 0 1.5rem 0;
+  counter-increment: my-counter;
+  position: relative;
+}
+
+ol#process-index li::before {
+  content: counter(my-counter);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  --size: 28px;
+  left: calc(-1 * var(--size) - 10px);
+  line-height: var(--size);
+  width: var(--size);
+  height: var(--size);
+  top: 0;
+  background: #b7c5af;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 1px 1px 3px #999;
+}
+
 video {
   float: right;
-  width: 300px;
-  margin: 30px;
+  width: 260px;
+  margin: 0 50px 30px 50px;
   box-shadow: 1px 1px 5px 1px #666;
 }
 
@@ -51,6 +115,7 @@ video {
   display: flex;
   justify-content: space-around;
   gap: 20px;
+  margin: 40px 0;
 }
 
 .gallery img {
@@ -61,4 +126,44 @@ video {
   float: left;
   margin: 0 20px 20px 0;
   max-width: 350px;
+}
+
+.img-right {
+  float: right;
+  margin: 0 0 20px 20px;
+  max-width: 350px;
+}
+
+span.icon {
+  background: #b7c5af;
+  height: 2.5rem;
+  display: inline-block;
+  line-height: 2.5rem;
+  width: 2.5rem;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  margin-bottom: .5rem;
+}
+
+span.text {
+  border: 1px solid #999;
+  border-radius: 10px;
+  padding: 5px 20px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+@media all and (max-width:640px) {
+  #title {
+    background-size: cover;
+  }
+
+  .summary-content {
+    display: block;
+  }
+
+  video {
+    float: none;
+  }
 }

@@ -379,3 +379,14 @@ section {
 	-webkit-animation: 3s lighthouse-move 1 normal linear;
 	animation: 3s lighthouse-move 1 normal linear;
 }
+
+@media screen and (max-width:480px) {
+	header img {
+		height: 35px !important;
+		margin: 10px 0;
+	}
+
+	.hide-for-mobile {
+		display: none !important;
+	}
+}

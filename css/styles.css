@@ -304,3 +304,9 @@ section {
 #Layer_1 {
 	animation: 3s lighthouse-move 1 normal linear;
 }
+
+@media screen and (max-width:480px) {
+	.hide-for-mobile {
+		display: none;
+	}
+}
