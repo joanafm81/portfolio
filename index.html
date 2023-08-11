@@ -1,51 +1,468 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Joana Martins - Portfolio Website</title>
-		<link rel="icon" href="icons8-circled-j-16.png">
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/styles.production.css">
-	</head>
-	<body>
-		<header class="page-header">
-			<img class="page-header__item" src="img/joana-martins-logo.png" alt="Joana Martins Logo">
-			<nav class="main-navigation page-header__item">
-				<ul role="menubar" class="navigation-list">
-					<li role="presentation">
-						<a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
-					</li>
-					<li>
-						<a href="about.html" role="menuitem" class="navigation-list__item">About me</a>
-					</li>
-					<li role="presentation">
-						<a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
-					</li>
-					<li role="presentation">
-						<a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
-					</li>
-				</ul>	
-			</nav>
-		</header>
-		<div class="profile">
-			<img class="profile__portrait" src="img/joana-martins-photo.jpg" alt="Joana Martins Portrait">
-			<h1>Hello World!</h1>
-			<p>My name is Joana Martins.</p>
-			<p>I am a <span>web</span> developer from Aveiro.</p>
-			<a href="https://github.com/joanafm81?tab=repositories" target="_blank">Check out some of my code</a>
-		</div>
-		<footer class="page-footer">
-			<p>Find me on</p>
-			<div class="social-media">
-				<a href="https://github.com/joanafm81" target="_blank"><img src="img/github-logo.svg" alt="Github Logo"></a>
-				<a href="https://twitter.com/JoanaMa68110848" target="_blank"><img src="img/twitter-logo.svg" alt="Twitter Logo"></a>
-				<a href="https://www.linkedin.com/in/joanafmartins/" target="_blank"><img src="img/linkedin-in-logo.svg" alt="Linkedin Logo"></a>
-				<a href="https://medium.com/@joana.fig.martins" target="_blank"><img src="img/medium-logo.svg " alt="Medium Logo" style="height: 30px"></a>
-			</div>
-		</footer>
-		<script src="js/tota11y.min.js"></script>
-	</body>
+
+<head>
+  <meta charset="utf-8">
+  <!-- To ensure proper rendering and touch zooming for all devices, add the responsive viewport meta tag to your <head>.-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Joana Martins</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <!-- I can also include Popper. If I don’t plan to use dropdowns, popovers, or tooltips, save some kilobytes by not including Popper.-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles_new.css">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg border-body sticky-top" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span style="color: rgb(255 255 0);font-weight: bold;">&lt/&gt</span> Joana Martins
+        <!-- <img class="page-header__item" src="img/joana-martins-logo.png" alt="Joana Martins Logo"> -->
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index_new.html">Home</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="#about-me">About me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#work">Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="hero">
+    <div>
+      <div class="container">
+        <div class="row">
+          <div class="col-8 col-md-6">
+            <h1>Hello, I'm <span style="color: rgb(255 255 0)">Joana Martins</span>.</h1>
+            <h2>I'm a Web Developer with a background in Tech Sales and Customer Service.</h2>
+            <!-- <a class="btn btn-primary btn-lg" href="work.html" role="button">View my work</a> -->
+            <a class="btn btn-outline-light btn-lg" href="#work" role="button">View my work</a>
+            <!-- <button type="button" class="btn btn-outline-light btn-lg ">View my work</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="about-me">
+    <div class="row">
+      <div class="col col-md-6 offset-md-2">
+        <h2>About me</h2>
+      </div>
+      <div class="col col-md-6 offset-md-2 order-2 order-md-1">
+
+        <p>After 15 years working with managers and developers to help customers solve business problems through the use
+          of technology, I decided to shift from an IT Sales and Customer Service Manager role into a new Web Developer
+          path.</p>
+
+        <p>My background gives me a unique perspective to be able to continue helping people and organizations, only on
+          a
+          different role. I’m passionate about improving efficiency using technology and eager to continually learn new
+          skills. </p>
+
+        <p>When I’m not coding you’ll probably find me with my two kids, reading a book, watching a movie, or baking
+          a nice cake.</p>
+
+        <p>Want to learn more about my background or explore potential collaborations? Check my <a href="#work">work</a>
+          and feel free to <a href="#contact">contact me</a>.
+        </p>
+
+        <!-- <p>I’m a Sales and Customer Service Manager in the tech industry turning web developer. Over the past 15 years,
+          I’ve
+          helped my customers (and their organizations) solve business problems and improve processes through the use of
+          technology.</p>
+        <p>Through collaborating with managers, developers and clients, I’ve gained a deeper understanding of the
+          business
+          processes and work performed in the industry.</p>
+        <p>That exposure, combined with my passion for improving efficiency using technology, my eagerness to learn new
+          skills and my focus on continual improvement, lead me to pursue training in web development.</p>
+        <p>With my knowledge of the industry and familiarity with the development process, I look forward to start
+          developing applications and continue to help people and organizations succeed using technology.</p> -->
+
+      </div>
+      <div class="col-md-3 order-1 order-md-2 text-center">
+        <img class="professional-headshot img-thumbnail rounded-circle" src="img/jfm-photo.jpg"
+          alt="Joana Martins Professional Headshot"><br>
+        <a class="btn btn-primary btn-sm" href="#" download>Download my resume</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills-tools">
+    <div class="container">
+      <h2 class="text-center">Skills and Tools</h2>
+
+      <div class="container text-center">
+
+        <div class="row">
+          <div class="col-12 col-md-8 offset-md-2">
+
+            <div class="row">
+              <!-- <div class="row justify-content-md-center"> -->
+              <div class="col-2 text-center">
+                <i class="devicon-html5-plain colored"></i>
+                <p>HTML</p>
+              </div>
+              <div class="col-2 text-center">
+                <i class="devicon-css3-plain colored"></i>
+                <p>CSS</p>
+              </div>
+              <div class="col-2 text-center">
+                <i class="devicon-javascript-plain colored"></i>
+                <p>JavaScript</p>
+              </div>
+              <div class="col-2 text-center">
+                <i class="devicon-react-original colored"></i>
+                <p>React</p>
+              </div>
+              <div class="col-2 text-center">
+                <i class="devicon-python-plain colored"></i>
+                <p>Python</p>
+              </div>
+              <div class="col-2 text-center">
+                <i class="devicon-bootstrap-plain colored"></i>
+                <p>Bootstrap</p>
+              </div>
+              <!-- </div> -->
+              <!-- <div class="row justify-content-md-center"> -->
+              <div class="col-2 text-center">
+                <i class="devicon-nodejs-plain colored"></i>
+                <p>Node.js</p>
+              </div>
+              <div class="col-2 text-center">
+                <i class="devicon-git-plain colored"></i>
+                <p>Git</p>
+              </div>
+              <div class="col-2 text-center">
+                <i class="devicon-github-original"></i>
+                <p>GitHub</p>
+              </div>
+              <!-- </div> -->
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="container">
+    <h2>Work</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+
+      <div class="col">
+        <div class="card">
+          <img src="img/printscreen-api.png" class="card-img-top" alt="myFlix API printscreen">
+          <div class="card-body">
+            <h3 class="card-title">myFlix (server)</h3>
+            <p class="card-text">REST API for a movie application called myFlix that interacts with a database that
+              stores data about different movies.</p>
+            <h4 class="card-subtitle fs-6 text-body-secondary">Objective</h4>
+            <small class="card-text text-body-secondary">Build the server-side component for a movie app called myFlix.
+              The web application
+              provides users with access to information about different movies, directors, and genres. Users are able
+              to sign up, update their personal information, and create a list of their favorite movies.</small>
+          </div>
+          <div class="card-body">
+            <span class="badge rounded-pill text-bg-light">JavaScript</span>
+            <span class="badge rounded-pill text-bg-light">MongoDB</span>
+            <span class="badge rounded-pill text-bg-light">Express</span>
+            <span class="badge rounded-pill text-bg-light">Node.js</span>
+            <span class="badge rounded-pill text-bg-light">Postman</span>
+            <span class="badge rounded-pill text-bg-light">PostgreSQL</span>
+            <span class="badge rounded-pill text-bg-light">Mongoose</span>
+          </div>
+          <div class="card-body">
+            <a href="https://github.com/joanafm81/myFlix/" target="_blank"><i class="fa-brands fa-github"></i><span
+                class="visually-hidden">github</span></a>
+            <a href="https://myflix-jfm.herokuapp.com/" target="_blank"><i class="fa-solid fa-link"></i><span
+                class="visually-hidden">website</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="img/printscreen-myflix.jpg" class="card-img-top" alt="myFlix printscreen">
+          <div class="card-body">
+            <h3 class="card-title">myFlix (client)</h3>
+            <p class="card-text">Single-page, responsive movie application called myFlix that provides users with
+              access
+              to information about different movies, directors, and genres. Users are able to sign up, update their
+              personal information, and create a list of their favorite movies.</p>
+            <h4 class="card-subtitle fs-6 text-body-secondary">Objective</h4>
+            <small class="card-text text-body-secondary">Using React, build the client-side component for a movie app
+              called myFlix based on its existing server-side code (REST API and database).</small>
+          </div>
+          <div class="card-body">
+            <span class="badge rounded-pill text-bg-light">React</span>
+            <span class="badge rounded-pill text-bg-light">Node.js</span>
+            <span class="badge rounded-pill text-bg-light">Express</span>
+            <span class="badge rounded-pill text-bg-light">Parcel</span>
+            <span class="badge rounded-pill text-bg-light">React Bootstrap</span>
+          </div>
+          <div class="card-body">
+            <a href="https://github.com/joanafm81/myFlix-client/" target="_blank"><i
+                class="fa-brands fa-github"></i><span class="visually-hidden">github</span></a>
+            <a href="https://myflix-jfm.netlify.app/" target="_blank"><i class="fa-solid fa-link"></i><span
+                class="visually-hidden">website</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="img/printscreen-chat.jpg" class="card-img-top" alt="Chat App printscreen">
+          <div class="card-body">
+            <h3 class="card-title">Chat App</h3>
+            <p class="card-text">Chat app for mobile devices that provides users with a chat interface and options to
+              share images and their location.</p>
+            <h4 class="card-subtitle fs-6 text-body-secondary">Objective</h4>
+            <small class="card-text text-body-secondary">Using React Native, build a chat app for mobile
+              devices.</small>
+          </div>
+          <div class="card-body">
+            <span class="badge rounded-pill text-bg-light">React</span>
+            <span class="badge rounded-pill text-bg-light">React Native</span>
+            <span class="badge rounded-pill text-bg-light">Expo</span>
+            <span class="badge rounded-pill text-bg-light">Google Firebase</span>
+          </div>
+          <div class="card-body">
+            <a href="https://github.com/joanafm81/chat-app/" target="_blank"><i class="fa-brands fa-github"></i><span
+                class="visually-hidden">github</span></a>
+            <a href="" target="_blank"><i class="fa-solid fa-link"></i><span class="visually-hidden">website</span></a>
+            <a class="case_study" href="case_study.html" target="_blank">Case study</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="img/recipe-ap.jpg" class="card-img-top" alt="Recipe App printscreen">
+          <div class="card-body">
+            <h3 class="card-title">Recipe App</h3>
+            <p class="card-text">Recipe App that lets users authenticate, search and view recipes.
+            </p>
+            <h4 class="card-subtitle fs-6 text-body-secondary">Objective</h4>
+            <small class="card-text text-body-secondary">Create a web application using the Django framework.</small>
+          </div>
+          <div class="card-body">
+            <span class="badge rounded-pill text-bg-light">HTML</span>
+            <span class="badge rounded-pill text-bg-light">CSS</span>
+            <span class="badge rounded-pill text-bg-light">Python</span>
+            <span class="badge rounded-pill text-bg-light">Django</span>
+            <span class="badge rounded-pill text-bg-light">PostgreSQL</span>
+          </div>
+          <div class="card-body">
+            <a href="https://github.com/joanafm81/myFlix/" target="_blank"><i class="fa-brands fa-github"></i><span
+                class="visually-hidden">github</span></a>
+            <!-- <a href="#!" target="_blank"><i class="fa-solid fa-link"></i></a> -->
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="img/printscreen-meet.png" class="card-img-top" alt="Meet printscreen">
+          <div class="card-body">
+            <h3 class="card-title">Meet App</h3>
+            <p class="card-text">The Meet App allows users to search for a city and get a list of events for
+              Full-Stack
+              Developers hosted in that city.</p>
+            <h4 class="card-subtitle fs-6 text-body-secondary">Objective</h4>
+            <small class="card-text text-body-secondary">
+              <ul>
+                <li>Build a serverless, progressive web application with React using a test-driven development (TDD)
+                  technique.</li>
+                <li>Use the Google Calendar API to fetch upcoming events.</li>
+                <li>Support offline access.</li>
+              </ul>
+            </small>
+          </div>
+          <div class="card-body">
+            <span class="badge rounded-pill text-bg-light">React / Create-React-App (CRA)</span>
+            <span class="badge rounded-pill text-bg-light">CSS</span>
+            <span class="badge rounded-pill text-bg-light">Jest</span>
+            <span class="badge rounded-pill text-bg-light">Cucumber</span>
+            <span class="badge rounded-pill text-bg-light">Puppeteer</span>
+            <span class="badge rounded-pill text-bg-light">Atatus</span>
+            <span class="badge rounded-pill text-bg-light">Lighthouse</span>
+            <span class="badge rounded-pill text-bg-light">Recharts</span>
+          </div>
+          <div class="card-body">
+            <a href="https://github.com/joanafm81/meet/" target="_blank"><i class="fa-brands fa-github"></i><span
+                class="visually-hidden">github</span></a>
+            <a href="https://joanafm81.github.io/meet/" target="_blank"><i class="fa-solid fa-link"></i><span
+                class="visually-hidden">website</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="img/printscreen-pokedex.jpg" class="card-img-top" alt="Pokedéx printscreen">
+          <div class="card-body">
+            <h3 class="card-title">Pokédex</h3>
+            <p class="card-text">Small Pokedéx app (web application with HTML, CSS, and JavaScript) that loads data
+              from
+              an external source (API), displays a list of Pokemón and enables the user to view details for each
+              Pokémon.</p>
+            <h4 class="card-subtitle fs-6 text-body-secondary">Objective</h4>
+            <small class="card-text text-body-secondary">Build a small web application with HTML, CSS and
+              JavaScript
+              that loads data from an
+              external API and enables viewing of data points in detail.</small>
+          </div>
+          <div class="card-body">
+            <span class="badge rounded-pill text-bg-light">HTML</span>
+            <span class="badge rounded-pill text-bg-light">CSS</span>
+            <span class="badge rounded-pill text-bg-light">JavaScript</span>
+            <span class="badge rounded-pill text-bg-light">jQuery</span>
+            <span class="badge rounded-pill text-bg-light">Bootstrap</span>
+            <span class="badge rounded-pill text-bg-light">Prettier</span>
+          </div>
+          <div class="card-body">
+            <a href="https://github.com/joanafm81/simple-js-app/" target="_blank"><i
+                class="fa-brands fa-github"></i><span class="visually-hidden">github</span></a>
+            <a href="https://joanafm81.github.io/simple-js-app/" target="_blank"><i class="fa-solid fa-link"></i><span
+                class="visually-hidden">website</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="img/printscreen-myflix-angular.jpg" class="card-img-top" alt="myFlix Angular printscreen">
+          <div class="card-body">
+            <h3 class="card-title">myFlix Angular (client)</h3>
+            <p class="card-text">Single-page, responsive movie application called myFlix that provides users with
+              access
+              to information about
+              different movies, directors, and genres. Users are able to sign up, update their
+              personal information, and create a list of their favorite movies.</p>
+            <h4 class="card-subtitle fs-6 text-body-secondary">Objective</h4>
+            <small class="card-text text-body-secondary">Using Angular, build the client-side component for a movie app
+              called myFlix based on
+              its existing server-side code (REST API and database).</small>
+          </div>
+          <div class="card-body">
+            <span class="badge rounded-pill text-bg-light">Angular</span>
+            <span class="badge rounded-pill text-bg-light">Node.js</span>
+            <span class="badge rounded-pill text-bg-light">Angular Material</span>
+          </div>
+          <div class="card-body">
+            <a href="https://github.com/joanafm81/myFlix-Angular-client/" target="_blank"><i
+                class="fa-brands fa-github"></i><span class="visually-hidden">github</span></a>
+            <a href="https://joanafm81.github.io/myFlix-Angular-client/" target="_blank"><i
+                class="fa-solid fa-link"></i><span class="visually-hidden">website</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="text-center">Contact</h2>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-3">
+          <div class="card text-center mb-3">
+            <!-- <div class="card-header">Header</div> -->
+            <a href="mailto:joana.fig.martins@gmail.com">
+              <div class="card-body">
+                <i class="fa-solid fa-envelope"></i>
+                <h3 class="card-title">E-mail</h3>
+                <p class="card-text">joana.fig.martins@gmail.com</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-3">
+          <div class="card text-center mb-3">
+            <a href="https://www.linkedin.com/in/joanafmartins/" target="_blank">
+              <div class="card-body">
+                <i class="fa-brands fa-linkedin"></i>
+                <h3 class="card-title">LinkedIn</h3>
+                <p class="card-text">joanafmartins</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-3">
+          <div class="card text-center mb-3"><a href="https://github.com/joanafm81" target="_blank">
+              <div class="card-body">
+                <i class="fa-brands fa-github"></i>
+                <h3 class="card-title">GitHub</h3>
+                <p class="card-text">joanafm81</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-3">
+          <div class="card text-center mb-3"><a
+              href="https://www.google.com/maps/place/Aveiro/@40.6393786,-8.6652275,14z/data=!3m1!4b1!4m6!3m5!1s0xd23980ed5b2e78d:0x3042e1cd013c1f07!8m2!3d40.6405055!4d-8.6537539!16zL20vMDE0cW0?entry=ttu"
+              target=_blank>
+              <div class="card-body">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3 class="card-title">Location</h3>
+                <p class="card-text">Aveiro, Portugal</p>
+              </div>
+          </div></a>
+        </div>
+      </div>
+    </div>
+    <!-- <p><a href="mailto:joana.fig.martins@gmail.com"><i class="fa-solid fa-envelope"></i></a><span>Email</span></p>
+    <p><a href="https://github.com/joanafm81" target="_blank"><i class="fa-brands fa-github"></i></a><span>GitHub</span>
+    </p>
+    <p><a href="https://www.linkedin.com/in/joanafmartins/" target="_blank"><i
+          class="fa-brands fa-linkedin"></i></a><span>LinkedIn</span></p>
+    <p><a href="https://twitter.com/JoanaMa68110848" target="_blank"><i
+          class="fa-brands fa-twitter"></i></a><span>Twitter</span></p>
+    <p><a
+        href="https://www.google.com/maps/place/Aveiro/@40.6393786,-8.6652275,14z/data=!3m1!4b1!4m6!3m5!1s0xd23980ed5b2e78d:0x3042e1cd013c1f07!8m2!3d40.6405055!4d-8.6537539!16zL20vMDE0cW0?entry=ttu"
+        target=_blank><i class="fa-solid fa-location-dot"></i></a><span>Aveiro, Portugal</span></p>
+    </div>
+    </div>
+    </div> -->
+  </section>
+
+  <footer class="page-footer">
+    <div class="container">
+      <p>&copy Joana Martins</p>
+      <!-- <div class="col" id="contacts">
+          <a href="mailto:joana.fig.martins@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://github.com/joanafm81" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/joanafmartins/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://twitter.com/JoanaMa68110848" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://medium.com/@joana.fig.martins" target="_blank"><img src="img/medium-logo.svg "
+            alt="Medium Logo" style="height: 30px"></a>
+        </div> -->
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <!-- <script src="js/tota11y.min.js"></script> -->
+</body>
+
 </html>
