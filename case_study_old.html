@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chat App Case Study</title>
+  <link rel="icon" href="icons8-circled-j-16.png">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="css/styles.production.css">
+  <link rel="stylesheet" type="text/css" href="css/styles_case_study.css">
+
+</head>
+
+<body>
+  <header class="page-header">
+    <a href="index.html"><img class="page-header__item" src="img/joana-martins-logo.png" alt="Joana Martins Logo" /></a>
+    <nav class="main-navigation page-header__item">
+      <ul role="menubar" class="navigation-list">
+        <li role="presentation" class="hide-for-mobile">
+          <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+        </li>
+        <li>
+          <a href="about.html" role="menuitem" class="navigation-list__item navigation-list__item">About<span
+              class="hide-for-mobile"> me</span></a>
+        </li>
+        <li role="presentation">
+          <a href="work.html" role="menuitem" class="navigation-list__item--active">Work</a>
+        </li>
+        <li role="presentation">
+          <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <body>
+    <section id="title">
+      <h1>Chat App</h1>
+      <h2>Building a native chat app for mobile devices</h2>
+    </section>
+
+    <main>
+      <section id="summary">
+
+        <h2>Summary</h2>
+
+        <div class="summary-content">
+          <div class="description">
+            <h3>Purpose and Context</h3>
+            <p>
+              Chat App is a personal project I built during the Full-Stack Immersion course at CareerFoundry to add to
+              my portfolio and demonstrate my knowledge of JavaScript mobile development/React Native development.
+            </p>
+
+            <h3>Objective</h3>
+            <p>My objective was to built a native chat app for mobile devices using React Native.</p>
+
+            <h3>Tools, Skills, Methodologies</h3>
+            <p>React, React Native, Expo (to develop the app), Google Firestore Database (to store the chat messages),
+              Google
+              Firebase (authentication), Firebase Cloud Storage (to store images), Gifted Chat library (to create the
+              chat
+              interface and functionality)</p>
+          </div>
+          <div class="info">
+            <h3>Duration</h3>
+            <p>2 weeks</p>
+
+            <h3>Credits</h3>
+            <p>Joana Martins</p>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="challenge" class="even">
+        <div class="container">
+          <h2>Challenge</h2>
+          <p>More and more people use their mobile devices to complete daily tasks, such as communicating with people,
+            managing tasks, scheduling events, shopping, and more. Chat apps (for mobile devices) are within the most
+            downloaded and used apps in the world. So in this project my goal was to built a high-quality native chat
+            app
+            for mobile devices using React Native (and other technologies). This allowed me to learn how to build a chat
+            app
+            and apply my React Native skills.</p>
+          <p><a href="https://reactnative.dev/">React Native</a> is a JavaScript framework for building Android and iOS
+            apps that only requires one codebase.
+            React Native apps are powerful and performant, as well as cheaper and easier to build that pure native apps.
+          </p>
+        </div>
+      </section>
+
+      <section id="process">
+
+        <h2>Process</h2>
+
+        <video src="img/chat-app-5.2.webm" type="video/webm" controls muted>
+          Your browser does no support video.
+        </video>
+
+        <p>To build the the chat app I followed these steps:</p>
+
+        <ol id="process-index">
+          <li>Setting up Expo and the development environment</li>
+          <li>Creating the chat interface</li>
+          <li>Choosing the Real-Time Application method and implementing a database solution</li>
+          <li>Storing data on the client-side</li>
+          <li>Implementing additional communication features</li>
+        </ol>
+
+        <h3><span class="icon"><i class="fa-solid fa-fw fa-laptop-code"></i></span> <span class="text">Setting up Expo
+            and the development environment</span></h3>
+        <p>Facebook recommends using <a href="https://expo.dev/" target="_blank">Expo</a> for developing and testing
+          React Native Apps. So I started by setting up Expo
+          and my development environment, which included the following tools:</p>
+        <ul>
+          <li>My terminal and Node</li>
+          <li>Expo and Expo CLI (the platform I used to build the app)</li>
+          <li>Expo Go App (to test the app on my mobile device)</li>
+          <li>Expo account</li>
+        </ul>
+        <p>To test, preview and record interactions as I was developing the app I used a virtual device. Since one of
+          the
+          best virtual device tools comes from Android Studio the one I set up was <a
+            href="https://developer.android.com/studio/run/emulator" target="_blank">Android Emulator</a>.</p>
+        <p>After setting up the development environment I created the first two screens (start screen and chat
+          screen).
+          I
+          also implemented the design and layout for the first screen, and set up the navigation between the two
+          screens.
+        </p>
+
+        <h3><span class="icon"><i class="fa-solid fa-fw fa-mobile-screen"></i></span> <span class="text">Creating the
+            chat
+            interface</span></h3>
+        <p>The next step was creating the chat interface. To create the chat interface I used
+          <a href="https://github.com/FaridSafi/react-native-gifted-chat" target="_blank">Gifted Chat</a> which is a
+          React library for developing chat apps. I decided to use this library because Gifted Chat allowed me to
+          create the exact type of app that I wanted, and the Chat App didn’t contain any unique requirements that
+          this
+          library
+          couldn’t fulfill.
+        </p>
+        <p>So I implemented the UI for my main chat screen, including a text input field to write messages, speech
+          bubbles
+          for sent and received messages, and a status message informing users that they’ve entered the chat.</p>
+
+        <h3><span class="icon"><i class="fa-solid fa-fw fa-comments"></i></span> <span class="text">Choosing the
+            Real-Time Applications method and data storage</span></h3>
+        <p>Without some method of storage my users wouldn’t be able to read and send messages in real-time. The next
+          step
+          was choosing a Real-Time Application (RTA) method and implementing a database solution.</p>
+        <p>Real-time data is information stored in a database that is delivered to a user without delay. Real-time
+          data
+          is
+          essencial for a chat app, as users need to see any new messages they’ve sent or received. After comparing my
+          project requirements with the opportunities offered by each RTA method I was left with two options: long
+          polling
+          and WebSockets. To decide which one was the best I had to consider a few other factors, namely the database
+          to
+          store data and the ability to implement real-time code. </p>
+        <p>The database I used to store data is a real-time database that comes with Google Firebase: <a
+            href="https://firebase.google.com/docs/firestore" target="_blank">Cloud Firestore</a>.
+          Firestore also provides a means to connect to that database in real-time with a handful of
+          easy-to-use functions without the need to code an implementation of real-time enabling technologies all by
+          yourself. Since Firestore uses WebSocktets to achieve this functionality, that was the RTA method I chose.
+        </p>
+
+        <h3><span class="icon"><i class="fa-solid fa-fw fa-database"></i></span> <span class="text">Storing data on
+            the client side</span></h3>
+        <img src="img/printscreen-chat.jpg" alt="Conversation" class="img-right" />
+        <p>Another essential feature for a chat app is to make the app available offline (and allow users to read
+          their
+          messages while offline). Storage on the client-side ensures that even when your users are offline, they’ll
+          still
+          be able to reread their sent and received messages. It also improves the apps performance by limiting the
+          number
+          of requests to the server. So the next step was implementing client-side data storage.</p>
+        <p>I implemented client-side data storage using a React Native package for local storage: <a
+            href="https://reactnative.dev/docs/asyncstorage" target="_blank">AsyncStorage</a>. This
+          package is recommended by the Expo and React Native teams. </p>
+        <p>Knowing if a user is online or offline is also essential to help determine the actions to perform. To
+          determine
+          whether a user is online or not, I used <a href="https://github.com/react-native-netinfo/react-native-netinfo"
+            target="_blank">NetInfo</a>, which is
+          also recommended by the Expo team. </p>
+
+        <h3><span class="icon"><i class="fa-solid fa-fw fa-location-dot"></i></span> <span class="text">Implementing
+            additional communication features</span></h3>
+        <p>When building native mobile apps, you can use some special features provided by the platform’s environment,
+          like the ability to access a device’s location, microphone, and camera.</p>
+        <p>In the final step of the project I was focused on implementing additional communication features to the
+          Chat
+          App. I gave the users the ability to send pictures (chosen from their device’s image library or taken with
+          the
+          camera) and share their current location.</p>
+        <p>Without a storage place for imagens chat’s participants wouldn’t be able to see the images that were send
+          via
+          the Chat App. The solution was storing the images on a remote server (this allows all devices to connect to
+          the
+          server to fetch the sent images). I used Cloud Storage for Firebase to store and send images in the Chat
+          App,
+          because I was already using Google Firestore to store chat messages.</p>
+
+      </section>
+
+      <section id="outcome" class="even">
+        <h2>Outcome and future steps</h2>
+
+        <p>The final product was a native mobile chat app to demonstrate my React Native programming skills. It’s a
+          simple app with a chat interface and options to share images and the location.</p>
+
+        <p>I really enjoyed this project because it was a great example of how frameworks and libraries can make a
+          developer’s life easier. I was able to quickly build a chat app using React Native and Gifted Chat.</p>
+
+        <p>One of the challenges I faced during the project was testing the functionality using the Android Emulator.
+          The process was very slow. I also ran into several issues when I was testing the communication features (I
+          couldn’t take pictures with the Android Emulator).</p>
+
+        <p>In the future it would be great to implement additional features, such as editing or deleting messages.</p>
+
+
+        <div class="gallery">
+          <img src="img/entry-prt.jpg" alt="Entry page" />
+          <img src="img/addpicture-prt.jpg" alt="Adding a picture" />
+          <img src="img/location+photo-prt.jpg" alt="Added location and photo from camera" />
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="page-footer">
+      <p>Find me on</p>
+      <div class="social-media">
+        <a href="https://github.com/joanafm81" target="_blank"><img src="img/github-logo.svg" alt="Github Logo"></a>
+        <a href="https://twitter.com/JoanaMa68110848" target="_blank"><img src="img/twitter-logo.svg"
+            alt="Twitter Logo"></a>
+        <a href="https://www.linkedin.com/in/joanafmartins/" target="_blank"><img src="img/linkedin-in-logo.svg"
+            alt="Linkedin Logo"></a>
+        <a href="https://medium.com/@joana.fig.martins" target="_blank"><img src="img/medium-logo.svg "
+            alt="Medium Logo" style="height: 30px"></a>
+      </div>
+    </footer>
+    <script src="js/tota11y.min.js"></script>
+  </body>
+
+</html>

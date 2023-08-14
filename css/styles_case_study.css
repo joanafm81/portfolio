@@ -4,7 +4,7 @@
   background-size: contain;
   background-position: top right;
   background-color: #1D120D;
-  height: 300px;
+  height: 340px;
   color: #fff;
 }
 
@@ -15,7 +15,7 @@ h2 {
 }
 
 #title h1 {
-  margin-top: 40px;
+  padding-top: 40px;
   font-size: 45px;
 }
 
@@ -25,13 +25,15 @@ h3.break:before {
   clear: both;
 }
 
-main {
+/* main {
   max-width: 1200px;
   margin: 0 auto;
-}
+} */
 
 section {
-  padding: 40px 30px;
+  padding-bottom: 60px;
+  margin-bottom: 0;
+
 }
 
 section:not(#title) h2 {
@@ -154,9 +156,10 @@ span.text {
   margin-left: 10px;
 }
 
-@media all and (max-width:640px) {
+@media all and (max-width:480px) {
   #title {
-    background-size: cover;
+    background-image: none;
+    /* background-size: cover; */
   }
 
   .summary-content {
